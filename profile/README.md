@@ -160,7 +160,7 @@ graph TB
     SW2 --> BCTL[BCT Lab]:::bldg
     SW2 --> Canteen[Canteen]:::bldg
     SW2 --> Guard[Guard House]:::bldg
-    SW2 --> Indus[Industrial (B-Block-TOP)]:::bldg
+    SW2 --> Indus[Industrial B-Block TOP]:::bldg
     SW2 --> ELib[E-Library]:::bldg
 
     classDef dmz fill:#fde68a,stroke:#b45309,stroke-width:1px;
@@ -173,8 +173,6 @@ graph TB
 ---
 
 ## 🧩 What We Host & Operate
-
-> Add your actual systems and links in the placeholders below.
 
 ### Core Services
 
