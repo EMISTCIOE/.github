@@ -41,17 +41,17 @@ The **Education Management Information System (EMIS)** Unit is the digital backb
 
 ## 🔄 Campus Access Flow (Mermaid)
 
-### 1) Wired/Wi‑Fi User Internet Access with Failover & VPN
+### 1) Wired/Wi-Fi User Internet Access with Failover & VPN
 
 ```mermaid
 sequenceDiagram
     autonumber
-    participant U as Client User (Wired/Wi‑Fi)
+    participant U as Client User (Wired/Wi-Fi)
     participant A as Access SW (SW1/SW2)
     participant C as Core SW (SW3)
     participant F as Firewall / DMZ
     participant I as ISP (ClassicTech 150/150)
-    participant V as Site‑to‑Site VPN
+    participant V as Site-to-Site VPN
     participant N as NTC Router / SIP
     participant B as NIC Asia Bank
 
@@ -78,7 +78,7 @@ sequenceDiagram
     A-->>U: Response to Client
 ```
 
-### 2) Campus Service Consumption (On‑Prem Resources)
+### 2) Campus Service Consumption (On-Prem Resources)
 
 ```mermaid
 sequenceDiagram
@@ -95,7 +95,7 @@ sequenceDiagram
 
     U->>A: Join VLAN (Student/Staff/VoIP/CCTV)
     A->>C: 1Gbps Uplink
-    par Wi‑Fi/Devices
+    par Wi-Fi/Devices
         C->>AC: AP Mgmt / SSIDs
         AC-->>U: Auth & WLAN Access
     and CCTV
@@ -106,7 +106,8 @@ sequenceDiagram
         ATT-->>U: Confirmation
     and App/Storage
         U->>SRV: Web/App/DB Requests
-        SRV<->>NAS: File Shares/Backups
+        SRV->>NAS: File Shares
+        NAS-->>SRV: Backups
         SRV-->>U: App Response
     and IP Phone
         U->>SIP: SIP Register/Calls (VoIP VLAN)
@@ -114,13 +115,13 @@ sequenceDiagram
     end
 ```
 
-### 3) High‑Level Campus Topology
+### 3) High-Level Campus Topology
 
 ```mermaid
 graph TB
     subgraph WAN
         ISP[ClassicTech 150/150]
-        VPN[Site‑to‑Site VPN]
+        VPN[Site-to-Site VPN]
         NTC[NTC Router & SIP]
         BANK[NIC Asia Bank]
     end
@@ -150,17 +151,17 @@ graph TB
     CORE --> SRV02
 
     %% Building Uplinks (1 Gbps)
-    SW1 --> CBlock[C‑Block]:::bldg
+    SW1 --> CBlock[C-Block]:::bldg
     SW1 --> Arch[Architecture]:::bldg
     SW1 --> RAC[RAC]:::bldg
-    SW1 --> BBlock[B‑Block]:::bldg
+    SW1 --> BBlock[B-Block]:::bldg
     SW2 --> MLab[Machine Lab]:::bldg
     SW2 --> Library[Library]:::bldg
     SW2 --> BCTL[BCT Lab]:::bldg
     SW2 --> Canteen[Canteen]:::bldg
     SW2 --> Guard[Guard House]:::bldg
-    SW2 --> Indus[Industrial (B‑Block‑TOP)]:::bldg
-    SW2 --> ELib[E‑Library]:::bldg
+    SW2 --> Indus[Industrial (B-Block-TOP)]:::bldg
+    SW2 --> ELib[E-Library]:::bldg
 
     classDef dmz fill:#fde68a,stroke:#b45309,stroke-width:1px;
     classDef core fill:#bfdbfe,stroke:#1d4ed8,stroke-width:1px;
