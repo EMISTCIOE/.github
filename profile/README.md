@@ -30,6 +30,7 @@ The **Education Management Information System (EMIS)** Unit is the digital backb
 | Name                    | Role              | Email                |
 | ----------------------- | ----------------- | -------------------- |
 | **Er. Shanta Maharjan** | Head of EMIS Unit | shantarup@ioe.edu.np |
+| **Er. Suwarna Lingden** | Deputy Head of EMIS Unit | suwarna@tcioe.edu.np |
 | **Mr. Suman Maharjan**  | Computer Operator | suman@tcioe.edu.np   |
 | **Ms. Kabira Khadka**   | Assistant         | kabira@tcioe.edu.np  |
 
@@ -163,11 +164,11 @@ graph TB
     SW2 --> Indus[Industrial B-Block TOP]:::bldg
     SW2 --> ELib[E-Library]:::bldg
 
-    classDef dmz fill:#fde68a,stroke:#b45309,stroke-width:1px;
-    classDef core fill:#bfdbfe,stroke:#1d4ed8,stroke-width:1px;
-    classDef access fill:#e5e7eb,stroke:#374151,stroke-width:1px;
-    classDef svc fill:#d1fae5,stroke:#065f46,stroke-width:1px;
-    classDef bldg fill:#f3f4f6,stroke:#111827,stroke-width:1px;
+    classDef dmz fill:#fde68a,stroke:#b45309,stroke-width:1px,color:#111827;
+    classDef core fill:#bfdbfe,stroke:#1d4ed8,stroke-width:1px,color:#111827;
+    classDef access fill:#e5e7eb,stroke:#374151,stroke-width:1px,color:#111827;
+    classDef svc fill:#d1fae5,stroke:#065f46,stroke-width:1px,color:#111827;
+    classDef bldg fill:#f3f4f6,stroke:#111827,stroke-width:1px,color:#111827;
 ```
 
 ---
